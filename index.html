@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Arthur Brito | Especialista em IA Generativa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+
+        .tech-card {
+            background-color: #f3f4f6;
+            border-left: 4px solid #3b82f6;
+            transition: all 0.3s ease;
+        }
+
+        .tech-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-50 text-gray-800">
+
+    <!-- Cabeçalho/Navegação -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#home" class="text-2xl font-bold text-blue-600">Arthur Brito</a>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-blue-600">Início</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-blue-600">Sobre</a>
+                    <a href="#skills" class="nav-link text-gray-700 hover:text-blue-600">Tecnologias</a>
+                    <a href="#projects" class="nav-link text-gray-700 hover:text-blue-600">Projetos</a>
+                    <a href="#experience" class="nav-link text-gray-700 hover:text-blue-600">Experiência</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600">Contato</a>
+                </nav>
+                <button class="md:hidden text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero text-white pt-32 pb-20">
+        <div class="container mx-auto px-6 text-center">
+            <img src="arthur.jpg" alt="Foto de Arthur Brito"
+                class="w-48 h-48 rounded-full mx-auto mb-6 border-4 border-blue-300 shadow-xl">
+            <h1 class="text-4xl md:text-5xl font-bold mb-3">Arthur Brito de Souza</h1>
+            <h2 class="text-2xl md:text-3xl font-light mb-6 text-blue-200">Especialista em IA Generativa | Agentes
+                Inteligentes | Automação CI/CD</h2>
+            <p class="text-lg max-w-3xl mx-auto mb-8 text-blue-100">Desenvolvedor Backend com 4 anos de experiência,
+                focado em construir e orquestrar agentes de IA e pipelines de automação usando jenkins,, e sistemas
+                multi agentes usando Langchain/LangGraph RAG com outras ferramentas e tecnicas de IA.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#projects"
+                    class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition duration-300 shadow-lg">Meus
+                    Projetos</a>
+                <a href="https://github.com/arthurbritosouza" target="_blank"
+                    class="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-700 transition duration-300">
+                    <i class="fab fa-github mr-2"></i>GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mim -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-blue-600">Sobre Mim</h2>
+                <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">Um pouco sobre minha jornada e paixão por
+                    tecnologia.</p>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-2/3">
+                    <p class="text-lg mb-6 text-gray-700">
+                        Sou um Desenvolvedor Backend especializado em IA Generativa e automação. Minha trajetória
+                        começou com PHP e Laravel, evoluindo para uma expertise em Python, onde concebo e desenvolvo
+                        agentes inteligentes e soluções avançadas de automação. Utilizo técnicas como **RAG
+                        (Retrieval-Augmented Generation)** para criar sistemas que não apenas automatizam tarefas, mas
+                        também geram insights valiosos e interagem de forma inteligente e contextual.
+                    </p>
+                    <p class="text-lg mb-6 text-gray-700">
+                        Busco constantemente desafios que me permitam explorar o potencial dos LLMs e da engenharia de
+                        software para construir produtos que otimizem a eficiência operacional, reduzam custos e
+                        acelerem o time-to-market.
+                    </p>
+                    <div class="mt-8 flex gap-4">
+                        <a href="mailto:britoarthur855@gmail.com"
+                            class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition duration-300">
+                            <i class="fas fa-envelope mr-2"></i> Entre em Contato
+                        </a>
+                        <a href="/path/to/your/cv.pdf" target="_blank"
+                            class="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition duration-300">
+                            <i class="fas fa-file-pdf mr-2"></i> Ver Currículo
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/3 flex justify-center">
+                    <div class="w-72 h-72 bg-blue-50 rounded-full flex items-center justify-center shadow-inner">
+                        <i class="fas fa-brain text-8xl text-blue-500 opacity-80"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tecnologias -->
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-blue-600">Tecnologias e Ferramentas</h2>
+                <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">As ferramentas que utilizo para construir
+                    soluções robustas e inteligentes.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="tech-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4 text-blue-700">IA Generativa & LLMs</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><i class="fas fa-check-circle text-blue-500 mr-2"></i>LangChain & LangGraph</li>
+                        <li><i class="fas fa-check-circle text-blue-500 mr-2"></i>Bancos Vetoriais (RAG)</li>
+                        <li><i class="fas fa-check-circle text-blue-500 mr-2"></i>Google, OpenAI, Grok APIs</li>
+                        <li><i class="fas fa-check-circle text-blue-500 mr-2"></i>DeepSeek, Anthropic</li>
+                    </ul>
+                </div>
+                <div class="tech-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4 text-blue-700">Backend</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><i class="fab fa-python text-blue-500 mr-2"></i>Python (FastAPI, Flask)</li>
+                        <li><i class="fab fa-php text-blue-500 mr-2"></i>PHP & Laravel</li>
+                        <li><i class="fab fa-golang text-blue-500 mr-2"></i>GoLang (Básico)</li>
+                        <li><i class="fas fa-database text-blue-500 mr-2"></i>MySQL & PostgreSQL</li>
+                    </ul>
+                </div>
+                <div class="tech-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4 text-blue-700">DevOps & Automação</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><i class="fab fa-jenkins text-blue-500 mr-2"></i>Jenkins (CI/CD)</li>
+                        <li><i class="fab fa-docker text-blue-500 mr-2"></i>Docker & Automação</li>
+                        <li><i class="fab fa-google text-blue-500 mr-2"></i>Google Cloud (GCP)</li>
+                        <li><i class="fas fa-server text-blue-500 mr-2"></i>Nginx, Apache, Portainer</li>
+                    </ul>
+                </div>
+                <div class="tech-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4 text-blue-700">Ferramentas</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><i class="fab fa-git-alt text-blue-500 mr-2"></i>Git, GitHub, GitLab</li>
+                        <li><i class="fas fa-cogs text-blue-500 mr-2"></i>Integração com APIs</li>
+                        <li><i class="fab fa-google-drive text-blue-500 mr-2"></i>Google Workspace APIs</li>
+                        <li><i class="fas fa-robot text-blue-500 mr-2"></i>Typebot & Tailscale</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-blue-600">Projetos em Destaque</h2>
+                <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">Soluções que demonstram minha paixão por IA e
+                    automação.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Search Data -->
+                <div class="project-card bg-gray-50 rounded-lg overflow-hidden shadow-md">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-blue-700">Search Data</h3>
+                        <p class="text-gray-600 mb-4">Transforma documentos PDF em uma interface de chat conversacional
+                            usando RAG para respostas precisas e contextuais.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">Python</span>
+                            <span
+                                class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">LangChain</span>
+                            <span
+                                class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">Streamlit</span>
+                            <span
+                                class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">Docker</span>
+                        </div>
+                        <a href="https://github.com/arthurbritosouza/search_data" target="_blank"
+                            class="text-blue-600 font-semibold hover:underline">Ver no GitHub →</a>
+                    </div>
+                </div>
+                <!-- EduSearch -->
+                <div class="project-card bg-gray-50 rounded-lg overflow-hidden shadow-md">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-blue-700">EduSearch</h3>
+                        <p class="text-gray-600 mb-4">Plataforma educacional que usa IA generativa (Gemini) para criar
+                            exercícios, flashcards e quizzes personalizados.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">Python</span>
+                            <span
+                                class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">FastAPI</span>
+                            <span
+                                class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">LangChain</span>
+                            <span
+                                class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">Gemini</span>
+                        </div>
+                        <a href="https://github.com/arthurbritosouza/EduSearch" target="_blank"
+                            class="text-blue-600 font-semibold hover:underline">Ver no GitHub →</a>
+                    </div>
+                </div>
+                <!-- Deep Search -->
+                <div class="project-card bg-gray-50 rounded-lg overflow-hidden shadow-md">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-blue-700">Deep Search com LangGraph</h3>
+                        <p class="text-gray-600 mb-4">Um sistema de pesquisa profunda que utiliza um fluxo de múltiplos
+                            agentes orquestrados com LangGraph para gerar respostas detalhadas e verificadas a partir de
+                            fontes da web.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">LangGraph</span>
+                            <span
+                                class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">Python</span>
+                            <span
+                                class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">Tavily</span>
+                            <span
+                                class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">BeautifulSoup</span>
+                        </div>
+                        <a href="https://lnkd.in/dbYa5pjf" target="_blank"
+                            class="text-blue-600 font-semibold hover:underline">Ver no GitHub →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiência Profissional -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-blue-600">Experiência Profissional</h2>
+                <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">Onde apliquei minhas habilidades para gerar
+                    resultados concretos.</p>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold text-blue-700">Programador Backend</h3>
+                <p class="text-lg font-semibold text-gray-600 mb-4">Lemien Tecnologia (Mai 2022 – Mar 2024)</p>
+                <ul class="space-y-4 text-gray-700">
+                    <li class="flex items-start"><i class="fas fa-rocket text-blue-500 mr-3 mt-1"></i><span>Conduzi a
+                            criação de microsserviços em Python para monitoramento de APIs, **reduzindo o downtime de
+                            integrações em >90%**.</span></li>
+                    <li class="flex items-start"><i class="fas fa-rocket text-blue-500 mr-3 mt-1"></i><span>Implementei
+                            pipelines CI/CD com Jenkins (Pipeline as Code), **encurtando o ciclo de deploy de 3 dias
+                            para 6 horas**.</span></li>
+                    <li class="flex items-start"><i class="fas fa-rocket text-blue-500 mr-3 mt-1"></i><span>Projetei e
+                            validei uma solução RAG para consulta de documentação técnica, **atingindo 95% de precisão
+                            nas respostas**.</span></li>
+                    <li class="flex items-start"><i class="fas fa-rocket text-blue-500 mr-3 mt-1"></i><span>Otimizei
+                            consultas SQL em bases com 100M+ de registros, **acelerando relatórios em 70%**.</span></li>
+                    <li class="flex items-start"><i class="fas fa-rocket text-blue-500 mr-3 mt-1"></i><span>Desenvolvi
+                            dashboards com IA para análise de marketing, **economizando 40h/mês em processos
+                            manuais**.</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-blue-600">Vamos Conversar?</h2>
+            <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto mb-8">Estou sempre aberto a novas oportunidades,
+                projetos e desafios. Sinta-se à vontade para entrar em contato.</p>
+            <div class="flex justify-center items-center gap-6">
+                <a href="mailto:britoarthur855@gmail.com" class="text-lg font-semibold text-blue-600 hover:underline"><i
+                        class="fas fa-envelope mr-2"></i>britoarthur855@gmail.com</a>
+                <span class="text-gray-300">|</span>
+                <a href="https://www.linkedin.com/in/arthur-brito-77b413273" target="_blank"
+                    class="text-lg font-semibold text-blue-600 hover:underline"><i
+                        class="fab fa-linkedin mr-2"></i>LinkedIn</a>
+                <span class="text-gray-300">|</span>
+                <p class="text-lg font-semibold text-gray-700"><i class="fas fa-phone mr-2"></i>(11) 96869-9610</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-blue-200">&copy; 2025 Arthur Brito de Souza. Todos os direitos reservados.</p>
+            <p class="text-sm text-blue-300 mt-2">Desenvolvido com Laravel e TailwindCSS.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Navegação suave
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80, // Ajuste para o cabeçalho fixo
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Menu mobile
+            const mobileMenuButton = document.querySelector('.md\:hidden');
+            const nav = document.querySelector('nav');
+            mobileMenuButton.addEventListener('click', () => {
+                nav.classList.toggle('hidden');
+            });
+        });
+
+    </script>
+</body>
+
+</html>
